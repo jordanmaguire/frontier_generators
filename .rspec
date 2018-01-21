@@ -1,4 +1,2 @@
---format RspecJunitFormatter
---out results/rspec.xml
 --format doc
 --color

@@ -1,5 +1,9 @@
 ## Unreleased
 
+## 0.26.1
+
+- Remove RSpec formatter as this was a TFG thing for our CI server.
+
 ## 0.26.0
 
 - Remove controller specs. They're stupid.

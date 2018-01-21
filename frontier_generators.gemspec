@@ -3,7 +3,7 @@ $:.push File.expand_path("../lib", __FILE__)
 
 Gem::Specification.new do |s|
   s.name        = "frontier_generators"
-  s.version     = "0.26.0"
+  s.version     = "0.26.1"
   s.authors     = ["Jordan Maguire"]
   s.homepage    = "https://github.com/jordanmaguire/frontier_generators"
   s.summary     = "Comprehensive generators for CRUD"
@@ -20,6 +20,5 @@ Gem::Specification.new do |s|
   s.add_dependency "indefinite_article", [">= 0.2.4"]
 
   s.add_development_dependency "rspec"
-  s.add_development_dependency "rspec_junit_formatter"
   s.add_development_dependency "byebug"
 end
