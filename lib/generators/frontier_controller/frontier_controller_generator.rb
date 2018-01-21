@@ -6,7 +6,6 @@ class FrontierControllerGenerator < Frontier::Generator
   def scaffold
     unless model.skip_ui?
       template "controller.rb", Frontier::Controller::ImplementationPath.new(model).to_s
-      template "controller_spec.rb", Frontier::Controller::SpecPath.new(model).to_s
     end
   end
 

@@ -1,5 +1,9 @@
 ## Unreleased
 
+## 0.26.0
+
+- Remove controller specs. They're stupid.
+
 ## 0.25.0
 
 - Update to ruby to 2.5.0
