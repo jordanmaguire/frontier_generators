@@ -1,5 +1,9 @@
 ## Unreleased
 
+## 0.25.0
+
+- Update to ruby to 2.5.0
+- Update to latest version of Rails 4
 - Fix #118: Ensure booleans are compared to true in feature specs
 - Fix #146: Handle cases where soft delete is false in delete specs
 - Fix #161: Check for flash when destroying a record
