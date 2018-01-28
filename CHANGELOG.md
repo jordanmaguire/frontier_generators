@@ -1,5 +1,6 @@
-## Unreleased
+## 0.27.0
 
+- Fix #1: Remove :invalid trait
 - Fix #2: Use url_for(action: :index) for cancel button on forms
 - Use url_for for new action on index
 
