@@ -17,7 +17,7 @@ private
 %p
   #{empty_message_without_call_to_action}
   - if #{Frontier::Authorization::Check.new(model, model.name.as_constant, :new)}
-    = link_to(\"Add #{model.name.as_singular_with_spaces.with_indefinite_article}.\", #{model.url_builder.new_path})
+    = link_to(\"Add #{model.name.as_singular_with_spaces.with_indefinite_article}.\", url_for(action: :new))
 STRING
     raw.rstrip
   end
