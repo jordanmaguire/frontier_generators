@@ -1,5 +1,7 @@
 ## Unreleased
 
+- Use url_for for new action on index
+
 ## 0.26.1
 
 - Remove RSpec formatter as this was a TFG thing for our CI server.
