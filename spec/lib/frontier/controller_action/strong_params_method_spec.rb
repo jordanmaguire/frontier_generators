@@ -23,7 +23,7 @@ describe Frontier::ControllerAction::StrongParamsMethod do
 
       let(:expected) do
         raw = <<-STRING
-def strong_params_for_test_model
+def test_model_params
   params.fetch(:test_model, {}).permit([:address_id, :bravo])
 end
 STRING
@@ -51,7 +51,7 @@ STRING
 
         let(:expected) do
           raw = <<-STRING
-def strong_params_for_test_model
+def test_model_params
   params.fetch(:test_model, {}).permit([:address_id, :bravo, :charlie])
 end
 STRING
@@ -79,7 +79,7 @@ STRING
 
         let(:expected) do
           raw = <<-STRING
-def strong_params_for_test_model
+def test_model_params
   params.fetch(:test_model, {}).permit([
     :address_id,
     :bravo,
@@ -119,7 +119,7 @@ STRING
 
       let(:expected) do
         raw = <<-STRING
-def strong_params_for_test_model
+def test_model_params
   params.fetch(:test_model, {}).permit([
     :address_id,
     {other_address_attributes: [:line_1, :state_id]}
@@ -163,7 +163,7 @@ STRING
 
       let(:expected) do
         raw = <<-STRING
-def strong_params_for_test_model
+def test_model_params
   params.fetch(:test_model, {}).permit([
     :address_id,
     :name,

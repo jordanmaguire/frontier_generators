@@ -6,7 +6,7 @@ class Frontier::ControllerAction::CreateAction
   # Renders the create action for a controller. EG:
   #
   # def create
-  #   @user = User.new(strong_params_for(User))
+  #   @user = User.new(user_params)
   #   @user.save if authorize(@user)
   #
   #   respond_with(@user, location: admin_users_path)
@@ -15,7 +15,7 @@ class Frontier::ControllerAction::CreateAction
   def to_s
     raw = <<-STRING
 def create
-  #{model.name.as_singular_ivar} = #{scopable_object}.new(strong_params_for_#{model.name.as_singular})
+  #{model.name.as_singular_ivar} = #{scopable_object}.new(#{model.name.as_singular}_params)
   #{Frontier::Authorization::Assertion.new(model, :create).to_s}
   #{model.name.as_singular_ivar}.save
 

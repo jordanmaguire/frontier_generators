@@ -7,7 +7,7 @@ class Frontier::ControllerAction::UpdateAction
   #
   # def update
   #   @user = find_user
-  #   @user.assign_attributes(strong_params_for(User))
+  #   @user.assign_attributes(user_params)
   #   @user.save if authorize(@user)
   #
   #   respond_with(@user, location: admin_users_path)
@@ -17,7 +17,7 @@ class Frontier::ControllerAction::UpdateAction
     raw = <<-STRING
 def update
   #{model.name.as_singular_ivar} = find_#{model.name.as_singular}
-  #{model.name.as_singular_ivar}.assign_attributes(strong_params_for_#{model.name.as_singular})
+  #{model.name.as_singular_ivar}.assign_attributes(#{model.name.as_singular}_params)
   #{Frontier::Authorization::Assertion.new(model, :update).to_s}
   #{model.name.as_singular_ivar}.save
 

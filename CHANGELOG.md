@@ -1,3 +1,7 @@
+## Unreleased
+
+- Fix #6: Rename `strong_params_for_psychometric_profile` to `psychometric_profile_params`
+
 ## 0.27.0
 
 - Fix #1: Remove :invalid trait

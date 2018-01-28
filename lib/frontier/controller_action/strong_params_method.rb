@@ -32,7 +32,7 @@ private
 
   def strong_params_method
     raw = <<-STRING
-def strong_params_for_#{model.name.as_singular}
+def #{model.name.as_singular}_params
   #{yield}
 end
 STRING
@@ -57,7 +57,7 @@ STRING
 
   # EG:
   #
-  # def attributs_for_user
+  # def user_params
   #   params.fetch(:user, {}).permit([
   #     :email,
   #     :name,
@@ -75,7 +75,7 @@ STRING
 
   # EG:
   #
-  # def attributs_for_user
+  # def user_params
   #   params.fetch(:user, {}).permit([:email, :name])
   # end
   #
