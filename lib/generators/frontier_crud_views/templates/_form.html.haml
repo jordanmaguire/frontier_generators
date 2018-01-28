@@ -6,4 +6,4 @@
   .form-actions
     = f.button :submit
     %span.or or
-    = link_to "Cancel", <%= model.url_builder.index_path %>
+    = link_to "Cancel", url_for(action: :index)

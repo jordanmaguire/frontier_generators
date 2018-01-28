@@ -1,5 +1,6 @@
 ## Unreleased
 
+- Fix #2: Use url_for(action: :index) for cancel button on forms
 - Use url_for for new action on index
 
 ## 0.26.1
