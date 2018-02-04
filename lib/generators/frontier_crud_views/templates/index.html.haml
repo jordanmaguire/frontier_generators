@@ -3,7 +3,7 @@
 <% if model.show_create? -%>
   .collection-actions
     - if <%= Frontier::Authorization::Check.new(model, model.name.as_constant, :new) %>
-      = link_to "Add <%= model.name.as_singular_with_spaces.with_indefinite_article %>", url_for(:new), class: "btn"
+      = link_to "Add <%= model.name.as_singular_with_spaces.with_indefinite_article %>", url_for(action: :new), class: "btn"
 <% end -%>
 
 - if <%= model.name.as_plural_ivar %>.exists?
